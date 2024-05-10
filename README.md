@@ -1,6 +1,38 @@
 # ES_IoTBoard_Master_Library
 
 ## API Guide
+
+<details>
+<summary>헤더 포함</summary>
+
+##### description
+헤더 파일 포함
+
+##### Example
+
+```c
+#include <sn_common.h>
+#include <sn_iot_data_model.h>
+#include <sn_iot.h>
+```
+
+
+</details>
+
+<details>
+<summary>Third Party Library 포함</summary>
+
+##### description
+cJSON Library 사용을 위해 Middlewares/Third_Party/cJSON 를 위치
+
+##### Example
+
+<img width="275" alt="스크린샷 2024-05-10 오후 12 03 37" src="https://github.com/sinusa/ES_IoTBoard_Master_Library/assets/155502554/d0197294-1857-4127-88db-6b83bb7bf039">
+
+</details>
+
+
+
 <details>
 <summary>RS485 데이터 수신 Function 및 Buffer 선언</summary>
 
