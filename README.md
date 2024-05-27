@@ -113,6 +113,47 @@ IoT Libaray 사용을 위한 초기화 수행
 </details>
 
 <details>
+<summary>AP Scan</summary>
+
+```c
+uint8_t sn_iot_wifi_scan(sn_iot_scan_info_t **out)
+```
+
+##### description
+주변 Ap 를 Scan 하여 List 를 전달
+
+##### Parameters
+
+> | name      | data type               | description                                                           |
+> |-----------|-------------------------|-----------------------------------------------------------------------|
+> |out      |   sn_iot_scan_info_t ** | 주변 AP 들의 정보를 전달, 사용후 반드시 free 필요   |
+
+##### Return
+
+> |data type               | description                                                           |
+> |-------------------------|-----------------------------------------------------------------------|
+> |uint8_t      |  Scan 결과의 Ap 개수  |
+
+##### Example
+
+```c
+    sn_iot_scan_info_t *ap_infos = NULL;
+    uint8_t ap_info_count = sn_iot_wifi_scan(&ap_infos);
+
+    for ( uint8_t i = 0; i < ap_info_count; i++) {
+        printf("%s\n", ap_infos[i].ssid);
+        printf("%d\n", ap_infos[i].rssi);
+    }
+    
+    free(ap_infos);
+
+
+```
+
+
+</details>
+
+<details>
 <summary>WiFi 접속</summary>
 
 ```c
